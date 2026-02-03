@@ -1,0 +1,21 @@
+#pragma once
+
+#include <string_view>
+
+namespace Plugin
+{
+	using namespace std::literals;
+
+	inline constexpr REL::Version VERSION
+	{
+		// clang-format off
+		@PROJECT_VERSION_MAJOR@u,
+		@PROJECT_VERSION_MINOR@u,
+		@PROJECT_VERSION_PATCH@u,
+		// clang-format on
+	};
+
+	inline constexpr auto NAME = "@PROJECT_NAME@"sv;
+	inline constexpr auto GIT_COMMIT = "@GIT_COMMIT_HASH@"sv;
+	inline constexpr auto BUILD_TIME = __DATE__ " " __TIME__;
+}

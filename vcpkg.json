@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "to-your-face-reloaded",
+  "version-string": "0.2.1",
+  "description": "SKSE plugin that ensures NPCs only make comments when the player is facing them",
+  "license": "MIT",
+  "dependencies": [
+    "spdlog",
+    "simpleini",
+    "xbyak",
+    "rapidcsv"
+  ],
+  "builtin-baseline": "4bb07a326d9b9bce3703272a509e5bc25dd9cfd5"
+}
