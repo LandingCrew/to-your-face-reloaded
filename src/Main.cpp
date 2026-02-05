@@ -16,7 +16,7 @@ namespace
 			util::report_and_fail("Failed to find SKSE log directory");
 		}
 
-		*path /= "to_your_face.log";
+		*path /= "to-your-face-reloaded.log";
 		auto sink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(path->string(), true);
 
 		auto log = std::make_shared<spdlog::logger>("global log", std::move(sink));
@@ -35,7 +35,7 @@ extern "C" DLLEXPORT constinit auto SKSEPlugin_Version = []() {
 	SKSE::PluginVersionData v;
 	v.PluginVersion(Plugin::VERSION);
 	v.PluginName(Plugin::NAME);
-	v.AuthorName("Fudgyduff (Enhanced by community)");
+	v.AuthorName("LandingCrew");
 	v.UsesAddressLibrary(false);  // We use pattern scanning, not Address Library
 	v.HasNoStructUse(true);
 	// Pattern scanning is version-agnostic - manually declare all known AE versions

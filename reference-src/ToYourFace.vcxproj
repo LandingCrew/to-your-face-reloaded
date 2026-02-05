@@ -22,7 +22,7 @@
     <ProjectGuid>{E373DC81-CE83-4054-9FED-0F35B3CE35CD}</ProjectGuid>
     <RootNamespace>Project1</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>to_your_face</ProjectName>
+    <ProjectName>to-your-face-reloaded</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

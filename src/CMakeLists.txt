@@ -33,7 +33,7 @@ configure_file(
 	@ONLY
 )
 
-# Create the DLL with output name "to_your_face"
+# Create the DLL with output name "to-your-face-reloaded"
 add_library(
 	"${PROJECT_NAME}"
 	SHARED
@@ -42,8 +42,8 @@ add_library(
 	"${CMAKE_CURRENT_BINARY_DIR}/version.rc"
 )
 
-# Set the output DLL name to "to_your_face" (not "ToYourFaceReloaded")
-set_target_properties("${PROJECT_NAME}" PROPERTIES OUTPUT_NAME "to_your_face")
+# Set the output DLL name to "to-your-face-reloaded" (not "ToYourFaceReloaded")
+set_target_properties("${PROJECT_NAME}" PROPERTIES OUTPUT_NAME "to-your-face-reloaded")
 
 target_compile_features(
 	"${PROJECT_NAME}"

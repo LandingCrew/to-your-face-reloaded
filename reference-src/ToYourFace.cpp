@@ -6,7 +6,7 @@
 
 #include <ShlObj.h>
 
-const char* kConfigFile = "Data\\SKSE\\Plugins\\to_your_face.ini";
+const char* kConfigFile = "Data\\SKSE\\Plugins\\to-your-face-reloaded.ini";
 
 
 
@@ -143,14 +143,14 @@ extern "C"
 	__declspec(dllexport) bool SKSEPlugin_Query(const SKSEInterface * skse, PluginInfo * info)
 	{
 		gLog.OpenRelative(CSIDL_MYDOCUMENTS,
-			"\\My Games\\Skyrim Special Edition\\SKSE\\to_your_face.log");
+			"\\My Games\\Skyrim Special Edition\\SKSE\\to-your-face-reloaded.log");
 		gLog.SetLogLevel(IDebugLog::kLevel_DebugMessage);
 
 		_MESSAGE("query");
 
 		// populate info structure
 		info->infoVersion = PluginInfo::kInfoVersion;
-		info->name = "to_your_face_sse";
+		info->name = "to-your-face-reloaded_sse";
 		info->version = 1;
 
 		if (skse->isEditor) {

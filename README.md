@@ -61,14 +61,14 @@ This is a modernization of the original [To Your Face SE - AE - VR](https://www.
 ### Steps
 1. Install SKSE64 if you haven't already
 2. Download the latest release
-3. Extract `to_your_face.dll` to `Data\SKSE\Plugins\`
-4. (Optional) Copy `to_your_face.ini` to `Data\SKSE\Plugins\` and customize settings
+3. Extract `to-your-face-reloaded.dll` to `Data\SKSE\Plugins\`
+4. (Optional) Copy `to-your-face-reloaded.ini` to `Data\SKSE\Plugins\` and customize settings
 
 ---
 
 ## Configuration
 
-The plugin is configured via `Data\SKSE\Plugins\to_your_face.ini`. See [to_your_face.ini](config/to_your_face.ini) for detailed documentation.
+The plugin is configured via `Data\SKSE\Plugins\to-your-face-reloaded.ini`. See [to-your-face-reloaded.ini](config/to-your-face-reloaded.ini) for detailed documentation.
 
 ---
 
@@ -106,7 +106,7 @@ NPC triggers comment
 ## Troubleshooting
 
 ### Plugin Not Loading
-1. Check SKSE64 log: `Documents\My Games\Skyrim Special Edition\SKSE\to_your_face.log`
+1. Check SKSE64 log: `Documents\My Games\Skyrim Special Edition\SKSE\to-your-face-reloaded.log`
 
 ### NPCs Still Comment When Not Facing
 1. Increase `MaxDeviationAngle` in config (try 45 or 60 degrees)

@@ -13,7 +13,7 @@ enum class FilterMode
 
 /**
  * Plugin configuration structure holding all settings.
- * Loaded from to_your_face.ini at plugin initialization.
+ * Loaded from to-your-face-reloaded.ini at plugin initialization.
  */
 struct PluginConfig
 {
@@ -40,11 +40,11 @@ struct PluginConfig
 inline PluginConfig g_config;
 
 // Constants
-inline constexpr std::string_view kConfigFile = "Data\\SKSE\\Plugins\\to_your_face.ini"sv;
-inline constexpr float pi = 3.14159265358979323846f;  // Probably overkill for this mod
+inline constexpr std::string_view kConfigFile = "Data\\SKSE\\Plugins\\to-your-face-reloaded.ini"sv;
+inline constexpr float pi = 3.1415f;  // Probably overkill for this mod
 
 /**
- * Loads plugin configuration from to_your_face.ini file.
+ * Loads plugin configuration from to-your-face-reloaded.ini file.
  * Provides backward compatibility - if new settings are missing,
  * defaults to angle-only filtering.
  *
