@@ -13,42 +13,25 @@ This is a modernization of the original [To Your Face SE - AE - VR](https://www.
 
 ## Features
 
-### Core Functionality
+### Filtering Options
 - **Angle-Based Filtering**: NPCs only comment when you're facing them (configurable cone angle)
-- **Distance-Based Filtering**: Optional distance threshold for more realistic greetings
+- **Distance-Based Filtering**: Optional proximity threshold for greetings
 - **Close Range Bypass**: Allow comments at very close range regardless of angle
 - **Four Filter Modes**: AngleOnly, DistanceOnly, Both (AND), Either (OR)
 
-### Technical Highlights
-- **Version-Agnostic**: Pattern scanning adapts to any Skyrim SE/AE version automatically
-- **Runtime Code Injection**: Uses Xbyak JIT compiler for safe, conflict-free hooking
+### Technical
+- **Version-Agnostic**: Pattern scanning adapts to any Skyrim SE/AE version
 - **No Address Library**: Works independently through byte pattern matching
+- **SIMD-Optimized**: AVX2 → SSE2 → Scalar fallback for pattern scanning
+- **Safe Hooking**: Xbyak JIT compiler for runtime code injection
 
-### Improvements
-#### Performance
-- **SIMD-optimized pattern scanning** (AVX2/SSE2)
-- Three-tier fallback: AVX2 → SSE2 → Scalar
-
-#### New Features
-- **Distance-Based Filtering**: Control greetings by proximity, not just angle
-- **Close Range Bypass**: NPCs can greet at close range regardless of angle
-- **Four Filter Modes**: Flexible AND/OR combinations (AngleOnly, DistanceOnly, Both, Either)
-
-#### Critical Bug Fixes
-- Fixed buffer overrun in all pattern scanners (crash prevention)
-- Fixed unaligned memory access causing General Protection Faults
+### Bug Fixes (from original mod)
+- Fixed buffer overrun in pattern scanners
+- Fixed unaligned memory access (GPF crashes)
 - Fixed illegal instruction crashes on pre-2013 CPUs
+- Fixed RAX register corruption in jump trampoline
 - Added AVX2 OS support verification (Windows 7 compatibility)
-- Fixed race condition in global initialization
-- Improved exception handling with separate handlers
 - Added instruction cache flushing after code modifications
-- Fixed RAX register corruption in jump trampoline (changed to R11)
-
-#### Code Quality
-- Comprehensive input validation
-- Better const-correctness
-- Enhanced error messages with exception diagnostics
-- Extensive documentations
 
 ---
 
@@ -169,21 +152,7 @@ cmake --build build --config Release
 
 ---
 
-## Credits
-
-**Original Mod Authors:**
-- [underthesky](https://www.nexusmods.com/profile/underthesky?gameId=110) - Original "To Your Face" for Skyrim LE
-- [xILARTH](https://www.nexusmods.com/profile/xILARTH?gameId=1704) - SE port
-- [sfts](https://www.nexusmods.com/skyrimspecialedition/users/261389) - To Your Face SE - AE - VR
-
-**Modernization & Development:**
-- **Code Review & Improvements:** Claude Sonnet 4.5
-- **SKSE Team:** For SKSE64 framework
-- **Xbyak:** For runtime assembly generation library
-
----
-
-## License & Permissions
+## License, Credits, & Permissions
 
 Per the original author ([underthesky](https://www.nexusmods.com/skyrim/mods/87635)):
 
@@ -195,10 +164,8 @@ Per the original author ([underthesky](https://www.nexusmods.com/skyrim/mods/876
 - [sfts (SE-AE-VR release)](https://www.nexusmods.com/skyrimspecialedition/users/261389)
 - [SKSE team](https://www.nexusmods.com/skyrimspecialedition/mods/30379)
 
----
-
-## Contributing
-
-Suggestions and bug reports welcome! Open an issue or pull request.
-
+**Modernization & Development:**
+- **Code Review & Improvements:** Claude Sonnet 4.5
+- **SKSE Team:** For SKSE64 framework
+- **Xbyak:** For runtime assembly generation library
 ---
